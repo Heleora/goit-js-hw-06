@@ -19,7 +19,39 @@ const markup = images
 </li>`)
 .join("");
 
-console.log(markup);
-
 const ulRef = document.querySelector(".gallery");
+
 ulRef.insertAdjacentHTML("afterbegin", markup);
+
+const markupStyles = `
+<style type="text/css">
+       .gallery {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      } 
+
+       .galery__item {
+        min-width: 300px;
+        min-height: 200px;
+      } 
+
+      .gallery__item + .gallery__item {
+      margin-left: 20px;
+      }
+
+      .gallery__image {
+       display: block;  
+       width: 100%;
+       height: 100%; 
+       object-fit: cover;      
+      }
+
+    </style>
+`;
+
+const headRef = document.querySelector("head");
+headRef.insertAdjacentHTML("beforeend", markupStyles);
+
+
