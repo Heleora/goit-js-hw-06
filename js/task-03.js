@@ -19,12 +19,13 @@ const markup = images
 </li>`)
 .join("");
 
-const ulRef = document.querySelector(".gallery");
+const ulGalleryRef = document.querySelector(".gallery");
+const headRef = document.querySelector("head");
 
-ulRef.insertAdjacentHTML("afterbegin", markup);
+ulGalleryRef.insertAdjacentHTML("afterbegin", markup);
 
 const markupStyles = `
-<style type="text/css">
+<style>
        .gallery {
         display: flex;
         margin: 0;
@@ -51,7 +52,6 @@ const markupStyles = `
     </style>
 `;
 
-const headRef = document.querySelector("head");
 headRef.insertAdjacentHTML("beforeend", markupStyles);
 
 

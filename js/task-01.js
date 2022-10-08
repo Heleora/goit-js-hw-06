@@ -2,11 +2,11 @@
 // const itemsByParentRef = document.querySelector("#categories").children;
 // console.log(` Number of categories: ${itemsByParentRef.length}`)    
 
-const itemsByClassRef = document.querySelectorAll("#categories .item");
+const liItemsRef = document.querySelectorAll("#categories .item");
 
-console.log(`Number of categories: ${itemsByClassRef.length}`);
+console.log(`Number of categories: ${liItemsRef.length}`);
 
-itemsByClassRef.forEach(item => {
+liItemsRef.forEach(item => {
     console.log(`Category: ${item.querySelector("h2").textContent}`);
     console.log(`Elements: ${item.querySelectorAll("li").length}`);
     });
