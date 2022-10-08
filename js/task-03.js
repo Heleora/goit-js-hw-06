@@ -13,17 +13,6 @@ const images = [
   },
 ];
 
-const markup = images
-.map(image => `<li class="gallery__item">
-<img class="gallery__image" src="${image.url}" alt="${image.alt}"/>
-</li>`)
-.join("");
-
-const ulGalleryRef = document.querySelector(".gallery");
-const headRef = document.querySelector("head");
-
-ulGalleryRef.insertAdjacentHTML("afterbegin", markup);
-
 const markupStyles = `
 <style>
        .gallery {
@@ -52,6 +41,16 @@ const markupStyles = `
     </style>
 `;
 
+const markup = images
+.map(image => `<li class="gallery__item">
+<img class="gallery__image" src="${image.url}" alt="${image.alt}"/>
+</li>`)
+.join("");
+
+const galleryListRef = document.querySelector(".gallery");
+const headRef = document.querySelector("head");
+
+galleryListRef.insertAdjacentHTML("afterbegin", markup);
 headRef.insertAdjacentHTML("beforeend", markupStyles);
 
 
