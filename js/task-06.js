@@ -1,6 +1,8 @@
 const validationInputRef = document.querySelector("#validation-input");
 
-validationInputRef.addEventListener("blur", (event) => {
+validationInputRef.addEventListener("blur", checkNumberOfSymbols);
+
+function checkNumberOfSymbols (event) {
     const { classList, value } = event.currentTarget;
 
  classList.add("invalid");
@@ -9,8 +11,7 @@ validationInputRef.addEventListener("blur", (event) => {
       classList.remove("invalid")
       classList.add("valid");
       };
-});
+};
 
 
-// inputRef.value.length == inputRef.attributes[2].value
 

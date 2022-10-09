@@ -27,9 +27,8 @@ function createBoxes(amount) {
     box.style.backgroundColor = getRandomHexColor();
    
     blocks.push(box);
+  };
 
     boxesRef.append(...blocks);
-
-  };
-  };
+};
 
