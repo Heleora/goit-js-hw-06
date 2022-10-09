@@ -5,7 +5,7 @@ validationInputRef.addEventListener("blur", (event) => {
 
  classList.add("invalid");
 
-   if (value.length == event.currentTarget.getAttribute("data-length")) {
+   if (value.trim().length == event.currentTarget.getAttribute("data-length")) {
       classList.remove("invalid")
       classList.add("valid");
       };
